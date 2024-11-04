@@ -4,6 +4,7 @@ const path = require('path')
 
 module.exports = {
     mode: 'development',
+
     //entry可以单入口或多入口，此entry为多入口，用对象形式，会在dist里生成两个js文件
     entry: {
         index: {
@@ -13,18 +14,21 @@ module.exports = {
             import: './src/vender.js'
         }
     },
+
     output: {
         path: path.resolve(__dirname, "dist"),
         publicPath:"./",
         filename: "[name].[hash:10].bundle.js",
         chunkFilename: "asset_[id:5].js"//单独打包import内容
     },
+
     resolveLoader:{
         //取个别名
         alias:{
             "replace-loader": path.resolve(__dirname,'./src/loaders/replace-loader')
         }
     },
+
     module: {
         rules: [
             {
@@ -42,10 +46,8 @@ module.exports = {
                     options: {
                         name:"野种李伟杭"//注意options参数和loader平级，在use里
                     }
-                }
-                
+                }                
             }
-
         ]
     },
 
@@ -56,8 +58,7 @@ module.exports = {
             template: path.resolve(__dirname, './src/index.html'),
             templateParameters:{
                 titleName:'示例html'//这个titleName在src/index.html用模板语法接收下
-            },
-            
+            },            
         })
     ],
     //devtool:'source-map',
