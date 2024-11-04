@@ -16,8 +16,8 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "dist"),
         publicPath:"./",
-        filename: "[name].js",
-        chunkFilename: "asset_[id].js"//单独打包import内容
+        filename: "[name].[hash:10].bundle.js",
+        chunkFilename: "asset_[id:5].js"//单独打包import内容
     },
     resolveLoader:{
         //取个别名
@@ -52,15 +52,15 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'test',//如果使用了下面的template，这个title不会生效了，必须要使用templateParameters更改
-            filename: 'asshole.html',
+            filename: 'example.html',
             template: path.resolve(__dirname, './src/index.html'),
             templateParameters:{
-                titleName:'test2'//这个titleName在src/index.html用模板语法接收下
+                titleName:'示例html'//这个titleName在src/index.html用模板语法接收下
             },
             
         })
     ],
-    devtool:'source-map',
+    //devtool:'source-map',
     //去除devserver有问题
 
 }
