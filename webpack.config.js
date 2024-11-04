@@ -37,7 +37,13 @@ module.exports = {
             },
             {
                 test: /\.js$/,
-                use:'replace-loader'
+                use:{
+                    loader:'replace-loader',
+                    options: {
+                        name:"野种李伟杭"//注意options参数和loader平级，在use里
+                    }
+                }
+                
             }
 
         ]
