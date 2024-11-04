@@ -19,6 +19,12 @@ module.exports = {
         filename: "[name].js",
         chunkFilename: "asset_[id].js"//单独打包import内容
     },
+    resolveLoader:{
+        //取个别名
+        alias:{
+            "replace-loader": path.resolve(__dirname,'./src/loaders/replace-loader')
+        }
+    },
     module: {
         rules: [
             {
@@ -31,7 +37,7 @@ module.exports = {
             },
             {
                 test: /\.js$/,
-                use:'./src/loaders/replace-loader.js'
+                use:'replace-loader'
             }
 
         ]
