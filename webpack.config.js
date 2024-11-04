@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin")
+const { Server } = require("https")
 const path = require('path')
 
 module.exports = {
@@ -31,6 +32,7 @@ module.exports = {
 
         ]
     },
+
     plugins: [
         new HtmlWebpackPlugin({
             title: 'test',//如果使用了下面的template，这个title不会生效了，必须要使用templateParameters更改
@@ -43,11 +45,6 @@ module.exports = {
         })
     ],
     devtool:'source-map',
-    devServer: {
-        port:8081,
-        //client:{
-            //overlay:false
-        //}
-    }
+    //去除devserver有问题
 
 }
