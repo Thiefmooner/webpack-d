@@ -47,6 +47,16 @@ module.exports = {
                         name: "野种李伟杭"//注意options参数和loader平级，在use里
                     }
                 }
+            },
+            {
+                test: /\.(jpg|svg)$/,
+                type: "asset",
+                parser: {
+                    dataUrlCondition: {
+                        //小于10kb的图片转base64，优点：减请求数量，缺点：体积变大
+                        maxSize: 10 * 1024 //10kb
+                    }
+                }
             }
         ]
     },

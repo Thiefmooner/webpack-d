@@ -2,3 +2,24 @@ body {
     height: 100px;
     background-color: blue;
 }
+
+.box1 {
+    height:100px;
+    weight:100px;
+    background-image: url('../asset/images/657e3a51ly1hj3tvn1ha8j21jk116gyj.jpg');
+    background-size: cover;
+}
+
+.box2 {
+    height:100px;
+    weight:100px;
+    background-image: url('../asset/images/u=2194445533\,3944806970&fm=253&app=138&f=JPEG.jpg');
+    background-size: cover;
+}
+
+.box3 {
+    height:100px;
+    weight:100px;
+    background-image: url('../asset/images/u=501456846\,344816367&fm=253&app=138&f=JPEG.jpg');
+    background-size: cover;
+}
