@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const { Server } = require("https")
 const path = require('path')
+const { Generator } = require("webpack")
 
 module.exports = {
     mode: 'development',
@@ -56,6 +57,10 @@ module.exports = {
                         //小于10kb的图片转base64，优点：减请求数量，缺点：体积变大
                         maxSize: 10 * 1024 //10kb
                     }
+                },
+                generator: {
+                    //打包图片名称
+                    filename:'static/images/[hash][ext][query]'
                 }
             }
         ]
