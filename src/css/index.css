@@ -1,0 +1,25 @@
+body {
+    height: 100px;
+    background-color: blue;
+}
+
+.box1 {
+    height:100px;
+    width:100px;
+    background-image: url('../images/123412.jpg'); /* url路径报错，有问题，在src下新建了一个images */
+    background-size: cover;
+}
+
+.box2 {
+    height:100px;
+    width:100px;
+    background-image: url('../images/124124.jpg');/* url路径报错，有问题，在src下新建了一个images */
+    background-size: cover;
+}
+
+.box3 {
+    height:100px;
+    width:100px;
+    background-image: url('../images/4423.jpg');/* url路径报错，有问题，在src下新建了一个images */
+    background-size: cover;
+}

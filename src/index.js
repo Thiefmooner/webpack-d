@@ -1,4 +1,4 @@
-import './index.css'
+import '../src/css/index.css'
 //动态导入import
 import('./chunkNameTest.js').then(
     log(324)

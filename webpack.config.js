@@ -29,7 +29,7 @@ module.exports = {
             "replace-loader": path.resolve(__dirname, './src/loaders/replace-loader')
         }
     },
-
+    
     module: {
         rules: [
             {
@@ -78,5 +78,4 @@ module.exports = {
     ],
     //devtool:'source-map',
     //去除devserver有问题
-
 }
