@@ -77,5 +77,15 @@ module.exports = {
         })
     ],
     //devtool:'source-map',
-    //去除devserver有问题
+    
+    //fixed: webpack5的devserver要加上static，感谢kris彦伯
+    //不然浏览器会出现，can not get，404报错
+    devServer: {
+        static:{
+            directory:path.join(__dirname,'src')
+        },
+        host:"127.0.0.1",
+        port:"3000",
+        open:true
+    }
 }
